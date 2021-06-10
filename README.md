@@ -17,7 +17,7 @@ First, create an empty database and update details in .env file in project core 
 ### API Endpoints
 
 #### Unauthenticated:
-**POST: /register**  
+`POST: /register`  
 Description: Creates a new user  
 Params: email, password, name  
 
