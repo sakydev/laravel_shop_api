@@ -17,15 +17,15 @@ First, create an empty database and update details in .env file in project core 
 ### API Endpoints
 
 #### Unauthenticated:
-**POST: /register**
+**POST: /register**  
 Description: Creates a new user  
-Params: email, password, name
+Params: email, password, name  
 
 Please note that a user also has levels. Level=1 is admin. An admin user is created by default when you run database seeds. Admin is the only one with access to removed / expired cart items.  
 
-**POST /login**
-		Description: Login a user and return token
-		Params: email, password
+**POST /login**  
+Description: Login a user and return token  
+Params: email, password  
 
 #### Normal User (requires API token):
 **GET: /user**
