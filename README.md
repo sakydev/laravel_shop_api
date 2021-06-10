@@ -14,7 +14,12 @@ First, create an empty database and update details in .env file in project core 
 - php artisan serve
 - php artisan test
 
-### API Endpoints
+#### How it works  
+1. First, send a request to `/register` endpoint and create a user
+2. Login using the user created in previous request and you'll get an `access_token`
+3. Send this `access_token` as `Authorization: Bearer $token` header
+
+#### API Endpoints
 
 #### Unauthenticated:
 `POST: /register`  
@@ -28,41 +33,41 @@ Description: Login a user and return token
 Params: email, password  
 
 #### Normal User (requires API token):
-`GET: /user`
+`GET: /user`  
 Description: Returns authenticated admin data
 
-`GET: /products`
+`GET: /products`  
 Description: List all products
 
-`POST: /products`
+`POST: /products`  
 Description: Creates a new product  
 Params: name, price  
 
-`DEL: /products`
+`DEL: /products`  
 Description: Removes a product  
 Params: product_id  
 
-`GET: /products/{product}`
+`GET: /products/{product}`  
 Description: List a single product  
 Params: product_id  
 
-`POST: /products/{product}`
+`POST: /products/{product}`  
 Description: Edit a product  
 Params: product_id, name, price  
 
-`GET: /cart`
+`GET: /cart`  
 Description: List everything in cart  
 
-`POST: /cart`
+`POST: /cart`  
 Description: Add an item to cart  
 Params: product_id  
 
-`DEL: /cart/{product}`  
+`DEL: /cart/{product}`   
 Description: Remove an item from cart  
 Params: product_id  
 
-`GET: /checkout`
-		Description: Mimicks checkout process  
+`GET: /checkout`  
+Description: Mimicks checkout process  
 
 #### Admin User
 `GET: /admin`  
