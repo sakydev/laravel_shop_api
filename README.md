@@ -18,10 +18,10 @@ First, create an empty database and update details in .env file in project core 
 
 #### Unauthenticated:
 **POST: /register**
-		Description: Creates a new user
-		Params: email, password, name
+Description: Creates a new user  
+Params: email, password, name
 
-		Please note that a user also has levels. Level=1 is admin. An admin user is created by default when you run database seeds. Admin is the only one with access to removed / expired cart items.
+Please note that a user also has levels. Level=1 is admin. An admin user is created by default when you run database seeds. Admin is the only one with access to removed / expired cart items.  
 
 **POST /login**
 		Description: Login a user and return token
